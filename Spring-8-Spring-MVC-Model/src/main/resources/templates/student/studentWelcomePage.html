@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student</title>
+</head>
+<body>
+<h1 th:text="${emptyName} ?:'This will be displayed if data(variable) from controller is null, so please give student\'s name'"></h1>
+<h1 th:text="'Hi '+ ${studentName}+',welcome to student center'"></h1>
+<h1 th:text=" 'You will finish '+ ${subject}+' course'"></h1>
+<h1 th:text=" 'And you will become ' +${goal}+ ' in the future' ?:'Nothing to worriy about, at least you will still be successful'"></h1>
+</body>
+</html>

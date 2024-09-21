@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CarInfo</title>
+</head>
+<body>
+  <h1> you will see the parameter from http request by RequestParam</h1>
+  <p th:text="'Car Make is: '+${carMake}"></p>
+  <p th:text="'Car Model is: '+${carModel}"></p>
+  <p th:text="'Car Made Year is: '+${year}"></p>
+  <p th:text="'Car Has Been Driven For: '+${drivenYear}+' Year(s)'"></p>
+</body>
+</html>

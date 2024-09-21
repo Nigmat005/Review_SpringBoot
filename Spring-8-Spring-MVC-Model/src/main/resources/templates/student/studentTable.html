@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>StudentTable</title>
+</head>
+<body>
+ <h1 style="color: darkgreen">Student Table</h1>
+ <table>
+   <thead>
+      <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Age</td>
+            <td>Gender</td>
+      </tr>
+   </thead>
+    <tr th:each="eachStudent:${studentList}">
+      <td th:text="${eachStudent.getFirstName()}"></td>
+      <td th:text="${eachStudent.getLastName()}"></td>
+      <td th:text="${eachStudent.age}"></td>
+      <td th:text="${eachStudent.getGender()}"></td>
+    </tr>
+ </table>
+</body>
+</html>

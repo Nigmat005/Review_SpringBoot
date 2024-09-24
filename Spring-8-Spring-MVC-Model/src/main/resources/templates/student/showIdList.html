@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>StudentId</title>
+</head>
+<body>
+<h1>Please check Student's Id or Id list</h1>
+    <p style="color: chocolate" th:if="${list}" th:text="'You will see list of ID: '+${list}"></p>
+    <p style="color: green" th:unless="${list}" th:text="'You will see single ID: '+${singleId}"></p>
+<form th:if="${iteratorFlag}" th:each="eachId:${list}">
+    <h2 style="color: aqua" th:text="'Id of '+${list.indexOf(eachId)+1}+' is: '+${eachId}"></h2>
+</form>
+</body>
+</html>
